@@ -1,0 +1,307 @@
+html,
+body {
+	font-family: Helvetica;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Catamaran", sans-serif;
+	letter-spacing: 0.3px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	animation: shakeAnimation 150ms 2 linear;
+}
+
+.right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.left {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	overflow: hidden;
+	position: fixed;
+	background: rgb(255, 153, 0);
+}
+
+.right-inner {
+	padding: 50px;
+}
+
+.left-inner {
+	display: flex;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	height: 700px;
+}
+
+.left .image {
+	background: url("./images/me-1.jpg") no-repeat center center;
+	height: 100%;
+	background-size: contain;
+}
+
+.left .info {
+	color: #fff;
+	text-align: center;
+}
+
+.left .info .social-links {
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+	.left-inner {
+		height: 100%;
+	}
+}
+
+.left .info .name {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.left .info .description {
+	font-size: 1.2srem;
+	font-weight: 400;
+}
+
+.left .info .fa {
+	margin: 10px;
+	font-size: 28px;
+	color: #fff;
+	cursor: pointer;
+}
+.left .info .fa:hover {
+	animation: shakeAnimation 150ms 2 linear;
+}
+
+@keyframes shakeAnimation {
+	0% {
+		transform: translateX(3px);
+	}
+	50% {
+		transform: translateX(-3px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.left,
+	.right {
+		display: block;
+		width: 100%;
+	}
+	.left {
+		position: static;
+	}
+}
+
+.right {
+	float: right;
+}
+
+.right a {
+	color: #000;
+}
+
+.right h4,
+.right .content {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.right h4 {
+	width: 20%;
+	margin: 0 0 0px;
+	padding-top: 5px;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	background-image: -webkit-linear-gradient(45deg, #ff6600 0%, #ff9900 100%);
+	background-image: linear-gradient(45deg, #ff6600 0%, #ff9900 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.right ul {
+	padding: 0;
+	margin: 0;
+}
+
+.right .content {
+	width: 80%;
+	padding: 0;
+	margin: 0 0 50px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+@media screen and (max-width: 600px) {
+	.right h4,
+	.right .content {
+		display: block;
+		vertical-align: top;
+		width: 100%;
+	}
+}
+
+.right .content ul.description {
+	padding-left: 20px;
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.right .introduction .intro-p:first-of-type {
+	margin-top: 0;
+}
+
+.right .introduction .job-pls {
+	font-weight: 500;
+	background-image: -webkit-linear-gradient(45deg, #ff6600 0%, #ff9900 100%);
+	background-image: linear-gradient(45deg, #ff6600 0%, #ff9900 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+}
+
+.right .skills .skill-category {
+	margin-bottom: 10px;
+}
+
+.right .skills .skill-category:last-of-type {
+	margin-bottom: 0px;
+}
+
+.right .skills .skill-category > strong {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.right .education {
+	font-size: 16px;
+}
+
+.right .education .university {
+	font-weight: 700;
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.right .education .university .duration {
+	font-size: 13px;
+	font-weight: 500;
+	float: right;
+	color: #999999;
+	text-transform: uppercase;
+	position: relative;
+	top: 1px;
+	margin-bottom: 5px;
+}
+
+.right .education .college {
+	font-weight: 700;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+.right .education .title {
+	font-size: 16px;
+}
+
+.right .education .study-abroad {
+	margin-top: 10px;
+}
+
+.right .experience .exp-item {
+	margin-bottom: 30px;
+}
+
+.right .experience .exp-item:last-of-type {
+	margin-bottom: 0;
+}
+
+.right .experience .exp-item .job {
+	margin: 0;
+	font-weight: 700;
+}
+
+.right .experience .exp-item .duration {
+	font-size: 13px;
+	font-weight: 500;
+	float: right;
+	color: #999999;
+	text-transform: uppercase;
+	position: relative;
+	top: 1px;
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 340px) {
+	.right .experience .exp-item .duration {
+		float: none;
+	}
+}
+
+.right .experience .exp-item .title {
+	font-weight: 600;
+	font-style: italic;
+}
+
+.right .projects .project-item {
+	margin-bottom: 20px;
+}
+
+.right .projects .project-title {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.right .projects .project-desc {
+	font-size: 15px;
+	margin: 0 0 10px;
+}
+
+.right a.resume {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 0px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.right a.resume:hover {
+	background-color: #cccccc;
+}
+
+.right a.resume .resume-link {
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+	background-image: -webkit-linear-gradient(45deg, #ff6600 0%, #ff9900 100%);
+	background-image: linear-gradient(45deg, #ff6600 0%, #ff9900 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+}

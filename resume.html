@@ -1,0 +1,315 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="IE=edge,chrome=1" httpEquiv="X-UA-Compatible" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>Resume | Victor Chirino</title>
+		<link rel="icon" href="/favicon/favicon-32x32.png" hreflang="en-us" />
+
+		<meta property="og:title" content="Resume | Victor Chirino" />
+		<meta
+			property="og:description"
+			content="Software developer engineer located in Buenos Aires, Argentina"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.victorchirino.com/resume" />
+		<meta property="og:site_name" content="Resume | Victor Chirino" />
+		<meta
+			property="og:image"
+			content="http://victorchirino.com/images/og.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:locale" content="en_US" />
+
+		<meta itemprop="name" content="Resume | Victor Chirino" />
+		<meta
+			itemprop="description"
+			content="Software developer engineer located in Buenos Aires, Argentina"
+		/>
+		<meta itemprop="image" content="http://victorchirino.com/images/og.png" />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:url" content="http://www.victorchirino.com/resume" />
+		<meta name="twitter:site" content="@vicchirino" />
+		<meta name="twitter:creator" content="@vicchirino" />
+		<meta name="twitter:title" content="Resume | Victor Chirino" />
+		<meta
+			name="twitter:description"
+			content="Software developer engineer located in Buenos Aires, Argentina"
+		/>
+		<meta
+			name="twitter:image:src"
+			content="http://victorchirino.com/images/og.png"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Fira Code"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<script
+			src="https://unpkg.com/react@18/umd/react.development.js"
+			crossorigin
+		></script>
+		<script
+			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+			crossorigin
+		></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<bod>
+		<div id="content"></div>
+		<script type="text/babel">
+			var data = {
+				name: "Hola, I'm Victor 👋🏼",
+				description: "Software developer based in Buenos Aires, Argentina",
+				jobStatus: "Currently building @ Culture Amp",
+				twitterURL: "https://twitter.com/vicchirino",
+				instagramURL: "https://www.instagram.com/vicchirino/",
+				githubURL: "https://github.com/vicchirino",
+				linkedinURL: "https://ar.linkedin.com/in/victor-chirino",
+				resumeURL: "https://www.victorchirino.com/resume.pdf",
+			};
+
+			class App extends React.Component {
+				render() {
+					return (
+						<div className="app">
+							<Left
+								name={this.props.data.name}
+								description={this.props.data.description}
+								jobStatus={this.props.data.jobStatus}
+								twitterURL={this.props.data.twitterURL}
+								instagramURL={this.props.data.instagramURL}
+								githubURL={this.props.data.githubURL}
+								linkedinURL={this.props.data.linkedinURL}
+							/>
+							<Right resumeURL={this.props.data.resumeURL} />
+						</div>
+					);
+				}
+			}
+
+			class Left extends React.Component {
+				render() {
+					return (
+						<div className="left">
+							<div className="left-inner">
+								<div className="image"></div>
+								<div className="info">
+									<h2 className="name">{this.props.name}</h2>
+									<div className="description">{this.props.description}</div>
+									<div className="jobStatus">{this.props.jobStatus}</div>
+									<div className="social-links">
+										<a href={this.props.twitterURL} target="_blank">
+											<i className="fa fa-twitter"></i>
+										</a>
+										<a href={this.props.instagramURL} target="_blank">
+											<i className="fa fa-instagram"></i>
+										</a>
+										<a href={this.props.githubURL} target="_blank">
+											<i className="fa fa-github"></i>
+										</a>
+										<a href={this.props.linkedinURL} target="_blank">
+											<i className="fa fa-linkedin"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					);
+				}
+			}
+
+			class Right extends React.Component {
+				render() {
+					return (
+						<div className="right">
+							<div className="right-inner">
+								<div className="introduction">
+									<h4>Intro</h4>
+									<div className="content">
+										<p className="intro-p">
+											I&#39;m a sofrware engineer with a strong background in
+											front-end development, with more than 7 years working as
+											an iOS developer and more than 4 years working as a web
+											developer.
+										</p>
+										<p className="intro-p">
+											I enjoy working collaboratively with others, learning new
+											technologies, and always with a positive attitude.
+										</p>
+									</div>
+								</div>
+								<div className="skills">
+									<h4>Skills</h4>
+									<div className="content">
+										<div className="skill-category">
+											<strong>Languages: &nbsp;</strong>
+											<span>
+												Swift, Objective-C, Javascript, Typescript, HTML,
+												CSS/Sass, Python, Ruby, Solidity, GraphQL
+											</span>
+										</div>
+										<div className="skill-category">
+											<strong>Libraries &amp; Frameworks: &nbsp;</strong>
+											<span>
+												Node.js, Express, React, React-Native, UIKit, Redux,
+												SwiftUI, Rails, Arel, NextJS, Hardhat
+											</span>
+										</div>
+										<div className="skill-category">
+											<strong>Tools &amp; Platforms: &nbsp;</strong>
+											<span>
+												Git, Vercel, Webpack, Xcode, VSCode, vim, Firebase,
+												Fastlane, Jira
+											</span>
+										</div>
+									</div>
+								</div>
+								<div className="education">
+									<h4>Education</h4>
+									<div className="content">
+										<div className="university">
+											<a href="https://www.frba.utn.edu.ar/" target="_blank">
+												UTN (Universidad Tecnológica Nacional)
+											</a>
+											<div className="duration">2009 - 2015</div>
+										</div>
+										<div className="title">
+											Bachelor&#39;s degree in Information system engineering
+										</div>
+									</div>
+								</div>
+								<div className="experience">
+									<h4>Experience</h4>
+									<div className="content">
+										<div className="exp-item">
+											<div className="job">
+												<a href="https://www.cultureamp.com/" target="_blank">
+													Culture Amp
+												</a>
+												<div className="duration">
+													July 2019 &mdash; Present
+												</div>
+											</div>
+											<div className="title">Senior engineer</div>
+											<ul className="description">
+												<li>
+													Released several user stories, developing the
+													front-end and the back-end.
+												</li>
+												<li>
+													Created a Slack bot using Ruby, connected with our
+													application, and for sending messages to our
+													customers.
+												</li>
+												<li>
+													Developed and released a Chrome extension using
+													Javascript that extended the web application
+													functionality
+												</li>
+											</ul>
+										</div>
+										<div className="exp-item">
+											<div className="job">
+												<a
+													className="company"
+													href="https://www.linkedin.com/company/zugata"
+													target="_blank"
+												>
+													Zugata
+												</a>
+												<div className="duration">
+													Oct 2016 &mdash; Dec 2018
+												</div>
+											</div>
+											<div className="title">Software developer</div>
+											<ul className="description">
+												<li>
+													Worked as a solo iOS developer releasing several
+													features to production.
+												</li>
+												<li>
+													Worked with the design team to redesign the entire iOS
+													application.
+												</li>
+												<li>
+													Released full user stories for the web application and
+													the iOS application using Typescript and the latest
+													Swift version.
+												</li>
+											</ul>
+										</div>
+										<div className="exp-item">
+											<div className="job">
+												<a
+													className="company"
+													href="https://www.toptal.com/"
+													target="_blank"
+												>
+													Toptal
+												</a>
+												<div className="duration">Jan 2015 &mdash; Present</div>
+											</div>
+											<div className="title">Software developer</div>
+											<ul className="description">
+												<li>
+													Joined an exclusive network of freelance developers
+													after a hard interview process including in-depth
+													skill review and live screening.
+												</li>
+												<li>Worked for several clients as an iOS developer.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div className="projects">
+									<h4>Projects</h4>
+									<div className="content">
+										<div className="project-item">
+											<a
+												className="project-title"
+												href="https://twitter.com/guybrush_quotes"
+												target="_blank"
+											>
+												Monkey Island bot
+											</a>
+											<p className="project-desc">
+												Twitter bot written in python that posts random quotes
+												of Monkey Island&#39;s main character, Guybrush
+												Threepwood, and screenshots of the game
+											</p>
+										</div>
+									</div>
+								</div>
+								<a
+									className="resume"
+									href={this.props.resumeURL}
+									target="_blank"
+								>
+									<div className="resume-link">
+										Grab a PDF of my full resume
+									</div>
+								</a>
+							</div>
+						</div>
+					);
+				}
+			}
+
+			ReactDOM.render(<App data={data} />, document.getElementById("content"));
+		</script>
+	</bod>
+</html>
