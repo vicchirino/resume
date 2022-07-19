@@ -28,7 +28,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key-id: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
-          aws-region: us-east-1
+          aws-region: sa-east-1
       - name: Deploty to S3
         run: aws s3 sync ./ s3://${{ secrets.BUCKET_NAME }}
       - name: Create Cloudfront Invalidation
